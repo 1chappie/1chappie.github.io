@@ -287,6 +287,115 @@ div {
             </ul>
             <p>Alright, so this was just a quick preview of CSS, but I actually learned quite a LOT while going through it, as you can probably tell haha. Next, it gets juicier: </p>
             <h1 class="mh1">JavaScript scripts scripting basics</h1>
+            <p>Now, I might go onto many many many tangents in this section, but I'll try my best to not "waste" all of my web development learning time with JavaScript algorithmic programming. Especially since I'm already supposed to know JavaScript from that discord bot I made like 3 summers ago.</p>
+            <p>So how's JavaScript useful to sites? It handles the interactivity and logic part. So button behavior, sending data, dynamic styling such as animation, etc. Fun fact - it was invented by Mozilla's co-founder, a guy named Brendan Eich. And from what I can remember, he used the name 'JavaScript' to ride the popularity of Java (at the time). Even if their names are similar (and I'm impressed that whoever is developing Java never though about suing Brendan), they are nothing alike.</p>
+            <h2 class="mh2">A JavaScript Hello World within an HTML page</h2>
+            <p>Firstly, let's create a 'scripts' folder. So far this feels like Unity. This is how the file-structure looks like at the moment btw:</p>
+            <img src="images/current-structure.png">
+            <p>I've added the project to GitHub, so this is why there's a <i>.gitattributes</i>, <i>README</i> and <i>index.html</i> there. Also, I should find a better way to incorporate images into all of this, it looks quite bad right now.</p>
+            <div class="image-text-wrapper">
+                <img class="inline-image" src="images/current-structure.png">
+                <p>Now this is some text. Let's add some more and see what happens. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <p>Alright, this is working like 70%. I did my best to make the image keep its aspect ratio in case of window resizing, but the result is wanky at best. 𝐼'𝓁𝓁 𝒻𝒾𝑔𝓊𝓇𝑒 𝒾𝓉 𝑜𝓊𝓉 𝒾𝓃 𝓋𝟥. Let's see the code I've botched from like 3 different sites:</p>
+            <pre class="code-block"><code>
+&lt;div class="image-text-wrapper"&gt;
+    &lt;img class="inline-image" src="images/current-structure.png"&gt;
+    &lt;p&gt;Now this is some text. Let's add some more[...]&lt;/p&gt;
+&lt;/div&gt;
+            </code></pre>
+            <p>This bit is the HTML part. As you can see, I'm creating a div container, which holds the image and the paragraph. It's pretty obvious that there's nothing special going on here... besides these two classes: <i>image-text-wrapper</i> and <i>inline-image</i>. Let's go into styles.css and see what those do:</p>
+            <pre class="code-block"><code>
+.inline-image {
+    margin: 0px 25px 0px 0px;
+    border: 0px;
+    border-radius: 12px;
+    box-shadow: 8px 6px 10px 3px rgb(173, 173, 173);
+
+    width: 300px;
+    object-fit: contain;
+}
+
+.image-text-wrapper {
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: 0px 0px;
+    padding: 0px 0px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+}
+            </code></pre>
+            <p>Whoa, that takes up quite a bit of space in here. So, let's begin with <i>image-text-wrapper</i>. The first 5 properties are there just to override the ones I've set for divs. I'm sure there's a better way of doing this, but this'll do for now. The next two, are the googled part: <i>display: flex;</i>, or CSS Flexbox Layout, makes it easier to design flexible and responsive layout structures. I'm pretty sure I'm gonna be using this a lot in the future. I don't have a very good understanding of it right now, but all I need to know is that it allows me to align multiple containers horizontally - thus <i>flex-direction: row;</i>. </p>
+            <p>Now <i>inline-image</i>: once again, the first 4 properties are there just to give it rounded corners and a drop shadow. Then the <i>width: 300px;</i> will basically force all images that I'm using here to be 300px wide - but they'll keep their aspect-ratio, due to <i>object-fit: contain;</i>. "object-fit" sets how the content of a container should be resized to fit it in case the container gets distorted by changing the window-size, so exactly what i need.</p>
+            <p>ANYWAY, after like 3 different tangents, </p>
+            <h2 class="mh2">JavaScript Hello World - for real now</h2>
+            <p>After making that scripts folder, I'll create a <i>main.js</i> inside of it, which I'll link to this HTML document by adding the following lines near the bottom of the body: </p>
+            <pre class="code-block"><code>
+&lt;script src="scripts/main.js"&gt;&lt;/script&gt;
+            </code></pre>
+            <p>This supposedly does the same thing as <i>&lt;link&gt;</i>, but not quite. Not only that it imports said script, but it also executes it. The reason why it's supposed to be written near the bottom of the page, is because an HTML document is loaded by the browser in the order that it's writen in. So having a JavaScript code that modifies an h1 on the page before said h1 is even loaded wouldn't make much sense.</p>
+            <p>MDN now wants me to add these lines in main.js (but I'll modify them a bit):</p>
+            <pre class="code-block"><code>
+const myHeading = document.querySelector('h1');
+myHeading.textContent = 'Hello world!';
+            </code></pre>
+            <p>Aaand nooooow...</p>
+            <p id="hello-world-anchor" style="font-weight: bold;">This is supposed to say 'Hello World'. If it doesn't then I'm dumb.</p>
+            <p>Great! It seems to work. I've used a &lt;p&gt; with an ID instead of having to change a header. The JS code seems pretty straight-forward and weird at the same time: I'm creating a constant (which I don't know why it has to be a constant tbh) that recieves the object reference found by the method <i>querySelector</i> called upon a document object (?). That's definitely a bit confusing, but I'll figure it out later. querySelector takes as argument any type of selector, in this case it took an "#id" (not in the code above, but in my code). After the object is found and stored to the constant, we now modify the property "textContent" of that object to whatever we want - in this case, "Hello World". </p>
+            <h2 class="mh2">JavaScript basics concept-hopping</h2>
+            <p>Since I'm already mostly familiar with basic algorithmic JavaScripting, I'll skip most of the parts that include variables, operators, data types and conditionals or loops. I'll only write down some small details that'll help me refresh my memory. </p>
+            <ul class="mul">
+                <li><i>let</i> is used to declare block-scope variables, <i>var</i> global-scope, and <i>const</i> is still a mistery for the most part</li>
+                <li>semi-colons are not necessary unless writing multiple things on the same line, but they are convention</li>
+                <li>as far as naming conventions go: variables and functions should be camelCase, constants UPPER_SNAKE_CASE, classes PascalCase and privates start with _ just as in Python</li>
+                <li>data types work as expected, except for <i>Number</i>, which seems to encompass floats, ints, and everything in-between</li>
+                <li><b>==</b> is the equality operator, and <b>===</b> is 'strict equality', so it also compares the data types, not just the value. i.e 2=='2' but 2!=='2'</li>
+                <li>functions are defined with the keyword "function"</li>
+            </ul>
+            <p>Alright, that's a quick recap on JavaScript. Here's a new concept: <i>events</i>. Real interactivity on a website requires event handlers. Those are code snippets that listen for a specific type of activity in the browser, and run code in response. A very obvious example is the <i>click event</i>, which is fired by the browser when you click on something with your mouse. Gonna add something that tests this in main.js:</p>
+            <pre class="code-block"><code>
+document.querySelector('#hello-world-anchor').addEventListener('click', function() {
+    alert('You won an iPhone 9! Damn how did you even do that.');
+});
+            </code></pre>
+            <p>So now, if you click on that Hello World paragraph that I've created earlier, you should get Apple engineering prototypes! For a better understanding of what's happening here, I'll write this in a less condensed manner: </p>
+            <pre class="code-block"><code>
+function do_an_alert(){
+    alert('You won an iPhone 9! Damn how did you even do that.');
+}
+
+let hwAnchor = document.querySelector('#hello-world-anchor');
+hwAnchor.addEventListener('click', do_an_alert)
+            </code></pre>
+            <p>To begin with, there's a function that calls to the built-in <i>alert()</i> thing, which is often used for spam I suppose. This function seems to be temporarily declared just by <i>function(){}</i> in the original code, via some JavaScript magic (which seems similar to Python lambdas). Then, we once again send a reference of the object with the id '#hello-world-anchor' to the variable <i>hwAnchor</i>. We then call the function <i>addEventListener()</i> on said variable - which adds an event of type 'click' that calls the function given as the second argument.</p>
+            <p>Oh, as I've read a bit further, that lambda function is getting an explanation: In JavaScript, function(){} given as an argument is called an <i>anonymous function</i>. There's an alternative way of writing these anon. functions, called <i>arrow functions</i>.</i></p>
+            <pre class="code-block"><code>
+document.querySelector('html').addEventListener('click', () => {
+    alert('Inside an arrow function.')
+});
+            </code></pre>
+            <h2 class="mh2">Adding more of this MinecraftScript to the page</h2>
+            <div class="image-text-wrapper">
+                <img class="inline-image" src="images/ferret-up.jpg" id="stiff-boy">
+                <p>To the left of this text, there should be an unsuspecting ferret which is momentarily being held in a very idiosyncratic way. Now, there's a problem with that - what if the ferret starts pissing itself? Well, you should put it down. Let's think of a way of putting the ferret down (as a quick side note - that's one stiff ferret damn). <br><br> Should be pretty simple - all that's needed is some kind of way of modifying attributes of elements via JavaScript, such that when a 'click' event is triggered on the image, it'll change to something else. I'll begin by cluelessly copy-pasting the code snippet from MDN, and then slowly going through each concept from there, as usual. I should also mention that the image has the id <i>#stiff-boy</i>.</p>
+            </div>
+            <pre class="code-block" style="margin: 25px 10px 10px 0px"><code>
+let ferretImage = document.querySelector('#stiff-boy');
+
+ferretImage.onclick = () => {
+    let ferretSrc = ferretImage.getAttribute('src');
+    if(ferretSrc === 'images/ferret-up.jpg') {
+        ferretImage.setAttribute('src','images/ferret-down.jpg');
+    } else {
+        ferretImage.setAttribute('src','images/ferret-up.jpg');
+    }
+}
+            </code></pre>
+            <p>Aaand, that's exactly what MDN gave me! Nice! There are 2 things to be taken into account here: the first one is that <i>.addEventListener('click', funct)</i> isn't really necessary, since <i>.onclick</i> is a property which helps define this kind of behavior faster (property as in - it is assigned with an equal, therefore the arrow function); and the second thing is <i>.getAttribute()</i> and <i>.setAttribute()</i> - probably extremely useful in the future.</p>
+            <p style="font-size: 12px; text-align: center;"><i>don't forget to click on the image to put the stiff boy down</i></p>
         </div>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
