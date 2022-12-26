@@ -1,0 +1,117 @@
+body{
+    background-image: url(assets/wallpaper.jpg);
+    background-size: cover;
+    backdrop-filter: blur(20px) saturate(0.4);
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar{
+    z-index: 1;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#navbar-tag{
+    width: 30px;
+    height: 100%;
+    writing-mode: sideways-lr;
+    text-align: center;
+    color: black;
+    backdrop-filter: blur(1px) brightness(4) saturate(2);
+    padding-left: 5px;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+#navbar-items{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* justify-content: space-evenly; */
+    overflow-x: hidden;
+    margin:0px 0px;
+    padding: 8px 0px;
+    /* backdrop-filter: blur(20px) saturate(0.5); */
+}
+
+#navbar-items a {
+    transition: 0.1s ease-in-out;
+    /* position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; */
+    position: relative;
+    display: flex;
+    /* flex: 0 0 auto; */
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px;
+    margin: 5px 10px;
+    backdrop-filter: blur(20px) brightness(0.4);
+    border-radius: 95%;
+    width: auto;
+    height: auto;
+  }
+
+#navbar-items>a.active{
+    backdrop-filter: brightness(3.5);
+    border-radius: 32%;
+}
+
+/* using this https://codepen.io/sosuke/pen/Pjoqqp */
+
+#navbar-items>a.active>img{
+    filter: invert(0%) sepia(12%) saturate(2685%) hue-rotate(337deg) brightness(94%) contrast(82%);
+}
+
+#navbar-items a:hover {
+    border-radius: 32%;
+}
+
+#navbar-items>a:hover:not(.active)>img{
+    transition: 0.1s ease-in-out;
+    filter: invert(79%) sepia(10%) saturate(103%) hue-rotate(201deg) brightness(98%) contrast(85%);
+    opacity: 1;
+}
+
+.navbutton>img{
+    filter: invert(79%) sepia(10%) saturate(103%) hue-rotate(201deg) brightness(85%) contrast(85%);
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.main{
+    z-index: 1;
+    overflow-y: hidden;
+    margin: 0px 0px 0px 120px;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(30px) brightness(0.3);
+
+}
