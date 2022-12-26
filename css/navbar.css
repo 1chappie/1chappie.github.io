@@ -17,7 +17,6 @@ body{
     overflow: visible;
     margin: 0;
     padding: 0;
-    position: fixed;
     left: 0;
     top: 0;
     width: 120px;
@@ -114,13 +113,8 @@ body{
 
 .main{
     z-index: 1;
-    overflow-y: hidden;
-    margin: 0px 0px 0px 120px;
-    padding: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
     height: 100%;
     backdrop-filter: blur(30px) brightness(0.3);
 

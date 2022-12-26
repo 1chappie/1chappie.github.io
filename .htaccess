@@ -15,5 +15,5 @@ RewriteRule ^blog/([^/]+)$ blog/$1/index.html [L]
 # route requests for /cv to /cv.html
 RewriteRule ^cv$ cv.html [L]
 
-# route requests for /~ to /index.html
-RewriteRule ^~$ index.html [L]
+# route requests for / to /index.html
+RewriteRule ^$ index.html [L]
