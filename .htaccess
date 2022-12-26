@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# route requests for /projects to /projects.html
+RewriteRule ^projects$ projects.html [L]
+
+# route requests for /projects/<project> to /projects/<project>/index.html
+RewriteRule ^projects/([^/]+)$ projects/$1/index.html [L]
+
+# route requests for /blog to /blog.html
+RewriteRule ^blog$ blog.html [L]
+
+# route requests for /blog/<post> to /blog/<post>/index.html
+RewriteRule ^blog/([^/]+)$ blog/$1/index.html [L]
+
+# route requests for /cv to /cv.html
+RewriteRule ^cv$ cv.html [L]
+
+# route requests for /~ to /index.html
+RewriteRule ^~$ index.html [L]
