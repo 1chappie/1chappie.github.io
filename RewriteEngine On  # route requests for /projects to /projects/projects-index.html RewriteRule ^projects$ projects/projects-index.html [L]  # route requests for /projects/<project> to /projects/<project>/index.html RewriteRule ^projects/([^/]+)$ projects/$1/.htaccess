@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# route requests for /projects to /projects/index.html
+RewriteRule ^projects$ projects/index.html [L]
+
+# route requests for /projects/<project> to /projects/<project>/index.html
+RewriteRule ^projects/([^/]+)$ projects/$1/index.html [L]
