@@ -1,6 +1,4 @@
 body{
-    background-size: cover;
-    backdrop-filter: blur(20px) saturate(0.4);
     margin: 0;
     padding: 0;
     font-size: 100%;
@@ -31,8 +29,8 @@ body{
     height: 100%;
     writing-mode: sideways-lr;
     text-align: center;
-    color: black;
-    backdrop-filter: blur(1px) brightness(4) saturate(2);
+    color: #4f5660;
+    background-color: #ffffff;
     padding-left: 5px;
     font-size: 16px;
     font-family:Verdana, Geneva, Tahoma, sans-serif
@@ -43,10 +41,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    /* justify-content: space-evenly; */
+    background-color: #f2f3f5;
     margin:0px 0px;
     padding: 8px 0px;
-    /* backdrop-filter: blur(20px) saturate(0.5); */
 }
 
 .navbutton {
@@ -57,36 +54,39 @@ body{
     justify-content: center;
     padding: 15px 15px;
     margin: 5px 10px;
-    backdrop-filter: blur(20px) brightness(0.4);
+    background-color: #e3e5e8;
     border-radius: 95%;
   }
 
 .navbutton>img{
-    filter: invert(79%) sepia(10%) saturate(103%) hue-rotate(201deg) brightness(85%) contrast(85%);
-    opacity: 0.8;
+    filter: invert(34%) sepia(9%) saturate(617%) hue-rotate(176deg) brightness(90%) contrast(89%);
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
 .navbutton.active{
-    backdrop-filter: brightness(3.5);
+    /* background-color: #007aff; */
+    background-color: #fa824e;
     border-radius: 32%;
 }
 
 /* using this https://codepen.io/sosuke/pen/Pjoqqp for the colors*/
 
 .navbutton.active>img{
-    filter: invert(0%) sepia(12%) saturate(2685%) hue-rotate(337deg) brightness(94%) contrast(82%);
+    filter: invert(96%) sepia(11%) saturate(17%) hue-rotate(76deg) brightness(108%) contrast(99%);
 }
 
 .navbutton:hover {
+    transition: all 0.2s ease-out;
+    /* background-color: #007aff; */
+    background-color: #fa824e;
     border-radius: 32%;
 }
 
 .navbutton:hover:not(.active)>img{
-    transition: all 0.25s ease-out;
-    filter: invert(79%) sepia(10%) saturate(103%) hue-rotate(201deg) brightness(98%) contrast(85%);
+    transition: all 0.05s ease-out;
+    filter: invert(96%) sepia(11%) saturate(17%) hue-rotate(76deg) brightness(108%) contrast(99%);
     border-radius: 32%;
     opacity: 1;
 }
@@ -116,6 +116,5 @@ body{
     flex-grow: 1;
     overflow: auto;
     height: 100%;
-    backdrop-filter: blur(30px) brightness(0.3);
-
+    background-color: #ffffff;
 }
