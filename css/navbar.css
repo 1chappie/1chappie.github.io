@@ -66,9 +66,12 @@ body{
 }
 
 .navbutton.active{
-    /* background-color: #007aff; */
     background-color: #fa824e;
     border-radius: 32%;
+}
+
+.navbutton:active{
+    transform: translateY(2px);
 }
 
 /* using this https://codepen.io/sosuke/pen/Pjoqqp for the colors*/
@@ -79,7 +82,6 @@ body{
 
 .navbutton:hover {
     transition: all 0.2s ease-out;
-    /* background-color: #007aff; */
     background-color: #fa824e;
     border-radius: 32%;
 }
