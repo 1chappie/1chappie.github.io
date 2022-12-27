@@ -8,3 +8,8 @@ document.getElementById("navbar-items").onmousemove = e => {
       // card.style.setProperty("--mouse-y", `${y}px`);
     };
   }
+
+function testing(){
+  console.log("wow");
+}
+
