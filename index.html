@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name = "author" content = "Ștefan Tănăsescu">
-    <meta name = "description" content = "Personal site">
-    <title>Home - 1chappie</title>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta name="author" content="Ștefan Tănăsescu">
+    <meta name="description" content="Personal site">
+    <title>Home - Ștefan Tănăsescu</title>
     <link rel="preload" href="assets/icons/blog.png" as="image">
     <link rel="preload" href="assets/icons/cv.png" as="image">
     <link rel="preload" href="assets/icons/email.png" as="image">
@@ -17,29 +16,38 @@
     <link rel="preload" href="assets/icons/projects.png" as="image">
     <link rel="preload" href="css/navbar.css" as="style">
     <link rel="stylesheet" href="css/navbar.css">
-  </head>
-  <body>    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <nav>
-      <div id = "navbar-tag">
-          © 2022 // TĂNĂSESCU ȘTEFAN // TASE // @1chappie
-          <hr style="border: 4px dotted #4f5660; ">
-      </div>
-      <div id = "navbar-items">
-          <a id = "home" class = "navbutton" href="/"><span class="tooltip-text">Main</span><img src="assets/icons/home.png"></a>
-          <a id = "projects" class = "navbutton" href="projects"><span class="tooltip-text">Projects</span><img src="assets/icons/projects.png"></a>
-          <a id = "cv" class = "navbutton" href="cv"><span class="tooltip-text">Resume</span><img src = "assets/icons/cv.png"></a>
-          <a id = "blog" class = "navbutton" href="blog"><span class="tooltip-text">Blog</span><img src = "assets/icons/blog.png"></a>
-          <a class = "navbutton" href="https://www.github.com/1chappie" target=”_blank” rel="noopener noreferrer"><span class="tooltip-text">GitHub</span><img src = "assets/icons/github.png"></a>
-          <a class = "navbutton" href="https://www.linkedin.com/in/stefan-tanasescu/" target=”_blank” rel="noopener noreferrer"><span class="tooltip-text">LinkedIn</span><img src = "assets/icons/linkedin.png"></a>
-          <a class= "navbutton" href="mailto:stefantanasescu91@gmail.com"><span class="tooltip-text">Email</span><img src="assets/icons/email.png"></a>
-      </div> 
-    </nav>
+<div id="nb"></div>
 
-    <section class = "main">
-        <h1 style="color:wheat">Hi</a>
-    </section>
+<section class="main">
+    <h1 class="main-title">
+        Hi! I'm Tănăsescu Ștefan.
+    </h1>
+    <h2 class="under-main-title">
+        A university student interested in programming, rambling and computer-stuff.
+    </h2>
+    <p class="normal-text">
+        Online, i usually go by the username "chappie". You can find some of my past projects, résumé, blog posts and contact info on the left.
+        Thanks for coming by! :)
+    </p>
+    <h2 class="sub-title">
+        Featured projects
+    </h2>
+    <h2 class="sub-title">
+        Featured posts
+    </h2>
+</section>
+<script src="scripts/nav.js"></script>
+<script>
+    injectNavbar("home");
+</script>
+</body>
 
-  </body>
-  
 </html>
