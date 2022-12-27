@@ -6,8 +6,9 @@ function injectNavbar(activeElement){
             let oldelem = document.querySelector("script#navbar");
             let newelem = document.createElement("nav");
             newelem.innerHTML = this.responseText;
-            newelem.getElementById(activeElement).classList.add("active");
             oldelem.parentNode.replaceChild(newelem,oldelem);
+            let a = document.getElementById(activeElement);
+            a.classList.add("active");
         }
     };
     xhr.send();
