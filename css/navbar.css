@@ -71,7 +71,7 @@ nav {
 }
 
 .navbutton:active{
-    transform: translateY(2px);
+    transform: translateY(2.3px);
 }
 
 /* using this https://codepen.io/sosuke/pen/Pjoqqp for the colors*/
