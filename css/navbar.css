@@ -10,7 +10,7 @@ body{
     align-items: center;
 }
 
-#navbar {
+nav {
     z-index: 2;
     overflow: visible;
     margin: 0;
