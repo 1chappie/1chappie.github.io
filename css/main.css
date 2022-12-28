@@ -20,7 +20,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.under-main-title{
+.under-main-title {
     color: #060607;
     font-weight: bolder;
     font-size: 20px;
@@ -28,7 +28,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.sub-title{
+.sub-title {
     color: #060607;
     font-weight: bold;
     font-size: 20px;
@@ -45,4 +45,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+.centered-remark {
+    color: #ababab;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+    padding-top: 40px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
