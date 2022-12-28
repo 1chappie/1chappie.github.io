@@ -8,7 +8,6 @@
 .widget {
     box-sizing: border-box;
     margin: 12px;
-    text-decoration: none; !important
     color: inherit;
     transition: all 0.2s ease-out;
     height: 300px;
@@ -39,7 +38,7 @@
     margin: 0;
     border: 0;
     width: 100%;
-    height: max(30%, 100px);
+    height: min(40%, 200px);
 }
 
 .thumbnail > img {
@@ -68,14 +67,15 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 3%;
+    margin-top: 4px;
+    padding: 4%;
 }
 
 .title {
     font-size: 22px;
     font-weight: bold;
     color: #060607;
-    margin: 8px 0 8px 0;
+    margin: 0 0 8px 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -92,8 +92,8 @@
     font-family: 'Poppins', sans-serif;
     font-weight: lighter;
     font-size: 14px;
-    background-color: #dcdee0;
-    color: #060607;
+    background-color: #e9eaec;
+    color: #919198;
     border-radius: 4px;
     display: inline-block;
     margin: 0 4px 4px 0;

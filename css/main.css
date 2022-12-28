@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5% 20%;
+    padding: 80px 20%;
     overflow: auto
 
 }
@@ -16,7 +16,15 @@
     color: #060607;
     font-weight: bold;
     font-size: 40px;
-    margin: 0;
+    margin: 10px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-title-but-smaller{
+    color: #060607;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -24,7 +32,7 @@
     color: #060607;
     font-weight: bolder;
     font-size: 20px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
