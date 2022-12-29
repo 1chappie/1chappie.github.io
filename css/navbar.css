@@ -14,11 +14,11 @@ nav {
 }
 
 #navbar-tag {
-    width: 30px;
+    width: 25%;
     height: 100%;
-    writing-mode: sideways-lr;
+    writing-mode: vertical-lr;
     text-align: center;
-    color: #8f9193;
+    color: #73838f;
     background-color: #e3e5e8;
     padding: 0 6px;
     font-size: 16px;
@@ -32,8 +32,10 @@ nav {
     flex-direction: column;
     align-items: stretch;
     background-color: #f2f3f5;
-    margin: 0px 0px;
-    padding: 8px 0px;
+    height: 100%;
+    width: 75%;
+    margin: 0;
+    padding: 8px 0;
 }
 
 .navbutton {
@@ -48,11 +50,11 @@ nav {
     border-radius: 95%;
 }
 
-.navbutton > img {
-    filter: invert(34%) sepia(9%) saturate(617%) hue-rotate(176deg) brightness(90%) contrast(89%);
-    height: 100%;
-    width: 100%;
+.navbutton > svg {
+    height: 36px;
+    width: 36px;
     object-fit: contain;
+    fill: #4c5861;
 }
 
 .navbutton.active {
@@ -66,8 +68,8 @@ nav {
 
 /* using this https://codepen.io/sosuke/pen/Pjoqqp for the colors*/
 
-.navbutton.active > img {
-    filter: invert(96%) sepia(11%) saturate(17%) hue-rotate(76deg) brightness(108%) contrast(99%);
+.navbutton.active > svg {
+    fill: #ffffff;
 }
 
 .navbutton:hover {
@@ -76,10 +78,8 @@ nav {
     border-radius: 32%;
 }
 
-.navbutton:hover:not(.active) > img {
-    transition: all 0.05s ease-out;
-    filter: invert(96%) sepia(11%) saturate(17%) hue-rotate(76deg) brightness(108%) contrast(99%);
-    border-radius: 32%;
+.navbutton:hover:not(.active) > svg {
+    fill: #ffffff;
 }
 
 .tooltip-text {
