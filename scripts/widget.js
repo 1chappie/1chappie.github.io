@@ -1,6 +1,7 @@
-function generateWidget(href, imageUrl, appName, title, tags, description) {
+function generateWidget(type, href, imageUrl, appName, title, tags, description) {
     var widget = document.createElement("a");
     widget.classList.add("widget");
+    widget.classList.add(type);
     widget.href = href;
 
     var thumbnail = document.createElement("div");

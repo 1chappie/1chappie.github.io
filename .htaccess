@@ -9,8 +9,8 @@ RewriteRule ^projects/([^/]+)$ projects/$1/index.html [L]
 # route requests for /blog to /blog.html
 RewriteRule ^blog$ blog.html [L]
 
-# route requests for /blog/<post> to /blog/<post>/index.html
-RewriteRule ^blog/([^/]+)$ blog/$1/index.html [L]
+# route requests for /blog/<post> to /blog/<post>.html
+RewriteRule ^blog/([^/]+)$ blog/$1.html [L]
 
 # route requests for /cv to /cv.html
 RewriteRule ^cv$ cv.html [L]
