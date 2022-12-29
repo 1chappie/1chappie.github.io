@@ -14,13 +14,16 @@
     <link rel="preload" href="assets/icons/home.png" as="image">
     <link rel="preload" href="assets/icons/linkedin.png" as="image">
     <link rel="preload" href="assets/icons/projects.png" as="image">
+    <link rel="preload" href="assets/thumbnails/example.png" as="image">
     <link rel="preload" href="css/navbar.css" as="style">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/widgets.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:wght@500;600;700&display=swap"
+          rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
 
 </head>
@@ -36,19 +39,76 @@
         A university student interested in programming, rambling and computer-stuff.
     </h2>
     <p class="normal-text">
-        Online, i usually go by the username "chappie". You can find some of my past projects, résumé, blog posts and contact info on the left.
+        Online, i usually go by the username "chappie". You can find some of my past projects, résumé, blog posts and
+        contact info on the left.
         Thanks for coming by! :)
     </p>
     <h2 class="sub-title">
         Featured projects
     </h2>
+    <div id="featured-projects"></div>
     <h2 class="sub-title">
         Featured posts
     </h2>
+    <div id="featured-posts"></div>
 </section>
 <script src="scripts/nav.js"></script>
+<script src="scripts/widget.js"></script>
 <script>
     injectNavbar("home");
+    let w1 = generateWidget(
+        "project-w",
+        "/projects/p1",
+        "assets/thumbnails/example.png",
+        null,
+        "Example title",
+        ["Front-end", "HTML/CSS/JS", "Tag3", "Tag4"],
+        "Example description nulla viverra velit,tortor ante varius mauris, " +
+        "vel dapi aliquam fermentum nulla nisi sit amet enim. Sed fermentum,"
+    );
+
+    let w2 = generateWidget(
+        "project-w",
+        "/cv.html",
+        "assets/thumbnails/example.png",
+        null,
+        "Titleeee",
+        ["End-end", "ASM", "Codeblocks", "Scratch"],
+        "Examhjfkashkjfsahjkfhjasrra velit,tortor ante varius mauris, vel dapi aliquam fermentum" +
+        "nulla nisnfnfnfnfrmentum,"
+    );
+
+    let wtgen = generateWidgetTable([w1, w2]);
+
+    let wt = document.querySelector("#featured-projects");
+    wt.parentNode.replaceChild(wtgen, wt);
+
+    w1 = generateWidget(
+        "blog-w",
+        "/blog/hello-world",
+        "assets/thumbnails/example.png",
+        null,
+        "Learning webdev",
+        ["December 12th, 2012"],
+        "Example description nulla viverra velit,tortor ante varius mauris, " +
+        "vel dapi aliquam fermentum nulla nisi sit amet enim. Sed fermentum,"
+    );
+
+    w2 = generateWidget(
+        "blog-w",
+        "/cv.html",
+        "assets/thumbnails/example.png",
+        null,
+        "What does the fox say?",
+        ["December 1th, 2222"],
+        "Examhjfkashkjfsahjkfhjasrra velit,tortor ante varius mauris, vel dapi aliquam fermentum" +
+        "nulla nisnfnfnfnfrmentum,"
+    );
+
+    wtgen = generateWidgetTable([w1, w2]);
+
+    wt = document.querySelector("#featured-posts");
+    wt.parentNode.replaceChild(wtgen, wt);
 </script>
 </body>
 
