@@ -32,9 +32,7 @@
 <section class="main">
     <h1 class="main-title">Blog</h1>
     <div id="wt"></div>
-    <!--    <p class="centered-remark">-->
-    <!--        More on <a href="https://www.github.com/1chappie" target=”_blank” rel="noopener noreferrer">my GitHub</a>-->
-    <!--    </p>-->
+
 </section>
 
 <script src="scripts/nav.js"></script>
@@ -45,7 +43,7 @@
     let w1 = generateWidget(
         "blog-w",
         "/blog/hello-world",
-        "assets/thumbnails/example.png",
+        "/assets/thumbnails/example.png",
         null,
         "Learning webdev",
         ["December 12th, 2012"],
@@ -53,10 +51,12 @@
         "vel dapi aliquam fermentum nulla nisi sit amet enim. Sed fermentum,"
     );
 
+    console.log(w1.outerHTML);
+
     let w2 = generateWidget(
         "blog-w",
         "/cv.html",
-        "assets/thumbnails/example.png",
+        "/assets/thumbnails/example.png",
         null,
         "What does the fox say?",
         ["December 1th, 2222"],

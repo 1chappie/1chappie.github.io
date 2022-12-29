@@ -6,9 +6,9 @@ function generateWidget(type, href, imageUrl, appName, title, tags, description)
 
     var thumbnail = document.createElement("div");
     thumbnail.classList.add("thumbnail");
-    var img = document.createElement("img");
-    img.src = imageUrl;
-    img.alt = "app thumbnail";
+    var img = document.createElement("div");
+    img.classList.add("image");
+    img.style.backgroundImage = "url(" + imageUrl + ")";
     thumbnail.appendChild(img);
     if (appName != null) {
         var _appName = document.createElement("h1");
@@ -24,7 +24,7 @@ function generateWidget(type, href, imageUrl, appName, title, tags, description)
     _title.classList.add("title");
     _title.innerHTML = title;
     content.appendChild(_title);
-    if(tags != null) {
+    if (tags != null) {
         var _tags = document.createElement("ul");
         _tags.classList.add("tags");
         for (var i = 0; i < tags.length; i++) {
