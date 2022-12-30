@@ -4,22 +4,22 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1rem;
     padding: 0;
 }
 
 .button-strip > a {
     transition: all 0.2s ease-out;
-    margin-bottom: 15px;
-    height: 40px;
+    margin-bottom: 1rem;
+    height: 2.5rem;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    font-size: 16px;
+    width: 10rem;
+    font-size: 1rem;
     font-weight: lighter;
-    margin-right: 10px;
+    margin-right: 0.7rem;
     font-family: 'Poppins', sans-serif;
 }
 

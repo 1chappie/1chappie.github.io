@@ -22,6 +22,9 @@ nav {
     background-color: #e3e5e8;
     padding: 0 6px;
     font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: lighter;
     font-family: 'Open Sans', sans-serif;
 }
@@ -44,6 +47,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 36px;
+    width: 36px;
     padding: 15px 15px;
     margin: 5px 10px;
     background-color: #e3e5e8;
@@ -51,8 +56,8 @@ nav {
 }
 
 .navbutton > svg {
-    height: 36px;
-    width: 36px;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
     fill: #4c5861;
 }
@@ -65,8 +70,6 @@ nav {
 .navbutton:active {
     transform: translateY(2px);
 }
-
-/* using this https://codepen.io/sosuke/pen/Pjoqqp for the colors*/
 
 .navbutton.active > svg {
     fill: #ffffff;
@@ -105,26 +108,33 @@ nav {
 
 #mini-navbar{
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 1.1rem;
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    height: 4vh;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
 }
 
 #mini-navbar>a{
     text-decoration: none;
-    width: 150px;
+    flex: 0 0 auto;
+    text-align: left;
+    padding-right: 2%;
     height: 100%;
-    border-radius: 2%;
 }
 
 #mini-navbar>span{
     color: #c0c0c0;
     height: 100%;
-    width: calc(100% - 150px);
+    flex: 1 1 auto;
     text-align: right;
+}
+
+@media (height: 900px) {
+    #navbar-tag{
+
+    }
 }
 

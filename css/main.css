@@ -7,41 +7,41 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 20%;
+    max-width: 55rem;
+    padding: 10vh 5rem;
     overflow: auto
-
 }
 
 .main-title {
     color: #060607;
     font-weight: bold;
-    font-size: 40px;
-    margin: 10px 0 20px 0;
+    font-size: 2.6rem;
+    margin: 1vh 0 2vh 0;
     font-family: 'Poppins', sans-serif;
 }
 
-.main-title-but-smaller{
+.main-title-but-smaller {
     color: #060607;
     font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 1.9rem;
+    margin-bottom: 2vh;
     font-family: 'Poppins', sans-serif;
 }
 
 .under-main-title {
     color: #060607;
     font-weight: bolder;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
 }
 
 .sub-title {
     color: #060607;
     font-weight: bold;
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -49,10 +49,9 @@
 .normal-text {
     color: #4f5660;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.1rem;
     margin: 0;
     padding: 0;
-    /*font-family: 'Open Sans', sans-serif;*/
     font-family: "Helvetica Neue", sans-serif;
 
 }
@@ -60,18 +59,18 @@
 .centered-remark {
     color: #ababab;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1rem;
     margin: 0;
-    padding-top: 40px;
+    padding-top: 1.6rem;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 
-iframe{
-    width: 100%;
+iframe {
+    width: 99%;
     height: 1700px;
-    padding:0;
-    margin-top:12px;
+    padding: 0;
+    margin-top: 1vh;
     border: 1px solid #d6d6d7;
     border-radius: 20px;
     overflow: scroll;

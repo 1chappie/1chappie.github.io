@@ -2,24 +2,37 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0 -12px;
+    margin: 0 -1%;
 }
 
 .widget {
     border: 1px solid #d6d6d7;
     border-radius: 18px;
     box-sizing: border-box;
-    margin: 12px;
+    margin: 1%;
     color: inherit;
     transition: all 0.2s ease-out;
-    height: 300px;
-    min-width: 360px;
-    max-width: min(500px, calc(50% - 24px));
-    flex: 1;
+    height: 18rem;
+    width: 48%;
+
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
+
+@media (max-width: 1100px) {
+    .widget {
+        height: 21rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .widget {
+        width: 100%;
+        height: 20rem;
+    }
+}
+
 
 .widget:hover {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
@@ -31,7 +44,7 @@
     transform: scale(1.01) translateY(-0.3px);
 }
 
-.thumbnail{
+.thumbnail {
     box-sizing: border-box;
     position: relative;
     padding: 0;
@@ -45,7 +58,6 @@
     transition: all 0.2s ease-out;
     width: 100%;
     height: 100%;
-    /*object-fit: cover;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -58,7 +70,7 @@
     transform: translate(-50%, -50%);
 
     color: white;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     text-shadow: 0 0 15px rgb(0, 0, 0, 1);
@@ -70,16 +82,16 @@
     height: 65%;
     display: flex;
     flex-direction: column;
-    margin-top: 4px;
+    margin-top: 0.25rem;
     padding: 4%;
 }
 
 
 .title {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #060607;
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -88,24 +100,24 @@
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
 }
 
 
 .tags > li {
     font-family: 'Poppins', sans-serif;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 0.8rem;
     background-color: #e9eaec;
     color: #919198;
     border-radius: 4px;
     display: inline-block;
-    margin: 0 4px 4px 0;
-    padding: 2px 8px;
+    margin: 0 0.25rem 0.25rem 0;
+    padding: 0.1rem 0.5rem;
 }
 
 .description {
-    font-size: 15px;
+    font-size: 0.9rem;
     color: #4f5660;
     margin: auto 0;
     padding: 0;
