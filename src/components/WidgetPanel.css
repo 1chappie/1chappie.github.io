@@ -1,0 +1,7 @@
+.widget-panel{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 -1%;
+    gap: 10px;
+}

@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center; /* align items to the right */
+    padding: 10% 1em 1em 1em;
+    width: 2.7rem; /* adjust as needed */
+    border-right: 1px solid #e0d9d9;
+}
+
+.nav-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0.5em 0;
+    padding: 0.6em;
+    z-index: 11;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 0.6em;
+}
+
+.nav-item:hover svg {
+    transform: scale(1.05); /* scale up on hover */
+}
+
+.nav-item svg {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        padding: 10% 0.5rem;
+        width: 2.5rem;
+    }
+
+    .nav-item:hover {
+        background-color: transparent;
+    }
+}

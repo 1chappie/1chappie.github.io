@@ -1,0 +1,146 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+    left: calc(-2rem); /* Half the width of the navbar */
+    width: 55rem;
+    max-width: 750px;
+    height: 100vh;
+}
+
+
+.content {
+    width: 100%;
+    padding: 10% 2rem;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    mask-image: linear-gradient(to bottom, black 93%, transparent 98%);
+}
+
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.see-more-link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.see-more-link {
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    margin: 0.3rem;
+    color: #777;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: inline-block; /* make the element inline */
+    align-content: center;
+}
+
+.see-more-link svg{
+    width: auto;
+    height: 0.7rem;
+}
+
+.see-more-link:hover {
+    background-color: #f4f4f4; /* default hover color */
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between; /* Distribute space equally between the buttons */
+    width: 60%; /* Set width to 60% of the parent container */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+a.button {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: #777;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: inline-block; /* make the element inline */
+    align-content: center;
+    text-align: center;
+    flex: 1; /* Make each button take up equal space within the button-row */
+    margin-right: 0.5rem; /* Space between buttons */
+}
+
+a.button:last-child {
+    margin-right: 0; /* Remove margin-right from the last button */
+}
+
+a.button:hover {
+    background-color: #e3e2e2; /* default hover color */
+}
+
+a.button svg{
+    width: auto;
+    height: 0.7rem;
+}
+
+a.highlighted-button{
+    /*background-color: #4bf5a3;*/
+    border: 1px solid #d7d6d6;
+}
+
+.dynamic-arrow {
+    padding-left: 4rem;
+    z-index: 10;
+    color: #777;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.arrow-text {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0 1rem 0.5rem;
+}
+
+.arrow {
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) { /* This is a common breakpoint for tablets and below */
+    .wrapper {
+        width: 100%; /* This will move the navbar to the bottom */
+        height: 100%;
+        left: 0;
+    }
+
+    .see-more-link{
+        background-color: #f4f4f4; /* default hover color */
+    }
+
+    .content{
+        padding: 10% 1rem 30% 1rem;
+    }
+
+    .button-row{
+        width: 100%;
+    }
+
+    .App{
+        font-size: 14px;
+    }
+
+}

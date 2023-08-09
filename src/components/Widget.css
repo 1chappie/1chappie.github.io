@@ -1,0 +1,98 @@
+.widget{
+    width: 48%;
+    height: 12rem;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e0d9d9;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.widget:hover{
+    background-color: #f4f4f4;
+}
+
+.widget:hover .widget-tag {
+    background-color: #e5e5e5;
+}
+
+
+.widget-title-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-left: 0.1rem;
+}
+
+.widget-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-right: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.widget-title-area svg{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.widget-desc{
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.widget-tags{
+    margin-bottom: 0.7rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex;
+    mask-image: linear-gradient(to left, transparent, black 1rem);
+}
+
+.widget-tags::-WebKit-scrollbar { display: none; }
+
+
+.widget-tag{
+    font-size: 0.8rem;
+    color: #777;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+.widget-last-comm{
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .widget{
+        width: 100%;
+    }
+
+    .widget:hover{
+        background-color: transparent;
+    }
+
+    .widget:hover .widget-tag {
+        background-color: #f4f4f4;
+        color: #777;
+    }
+}
