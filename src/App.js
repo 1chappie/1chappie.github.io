@@ -3,7 +3,6 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Home from "./pages/Home";
 import Socials from "./pages/Socials";
-import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import {Navigate, Route, BrowserRouter, Routes} from 'react-router-dom';
 import ScrollToTop from "./components/ScrollToTop";
@@ -24,7 +23,7 @@ function App() {
                             <Route path="/cv" element={<Navigate to="/resume"/>}/>
                             <Route path="/socials" element={<Socials/>}/>
                             <Route path="/contact" element={<Navigate to="/socials"/>}/>
-                            <Route path="*" element={<NotFound/>}/>
+                            <Route path="*" element={<Navigate to="/"/>}/>
                         </Routes>
                     </div>
                 </div>
