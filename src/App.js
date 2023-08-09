@@ -4,7 +4,7 @@ import Resume from "./pages/Resume";
 import Home from "./pages/Home";
 import Socials from "./pages/Socials";
 import Navbar from "./components/Navbar";
-import {Navigate, Route, BrowserRouter, Routes} from 'react-router-dom';
+import {Navigate, Route, Routes, BrowserRouter} from 'react-router-dom';
 import ScrollToTop from "./components/ScrollToTop";
 
 

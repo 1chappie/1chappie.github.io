@@ -1,9 +1,9 @@
 import WidgetPanel from "../components/WidgetPanel";
 import Widget from "../components/Widget";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import ScrollToTop from "../components/ScrollToTop";
-import {fetchCombinedRepos, fetchFeaturedRepos} from "../api/api";
+import {fetchFeaturedRepos} from "../api/api";
 
 function calculateAge() {
     // yes, this is overkill, yes, I'm aware
