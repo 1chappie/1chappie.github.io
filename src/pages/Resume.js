@@ -17,8 +17,7 @@ export default function Resume() {
     }, []);
 
 
-    return (
-        <>
+    return (<>
             <h1>CV Tănăsescu Ștefan</h1>
             <p>
                 <b>&gt;&gt;&gt;&nbsp;</b> I do my best to keep the CV updated, and I've found that the most convenient
@@ -27,18 +26,16 @@ export default function Resume() {
             </p>
             <div className={"button-row"}>
                 <a className={"button highlighted-button"} href={viewLink} target="_blank"
-                   rel="noopener noreferrer" onClick={()=>setArrowVisible(true)}>
+                   rel="noopener noreferrer" onClick={() => setArrowVisible(true)}>
                     View <Hyperlink/>
                 </a>
-                <a className={"button"} href={downloadLink} onClick={()=>setArrowVisible(true)}>
+                <a className={"button"} href={downloadLink} onClick={() => setArrowVisible(true)}>
                     Download PDF
                 </a>
             </div>
-            {arrowVisible ?
-                <div className="dynamic-arrow" style={{top: contactPosition.top}}>
-                    <span className="arrow">←</span>
-                    <span className="arrow-text"> let's talk</span>
-                </div> : null}
-        </>
-    );
+            {arrowVisible ? <div className="dynamic-arrow" style={{top: contactPosition.top}}>
+                <span className="arrow">←</span>
+                <span className="arrow-text"> let's talk</span>
+            </div> : null}
+        </>);
 }
