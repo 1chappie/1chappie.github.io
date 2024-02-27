@@ -1,6 +1,16 @@
+@font-face {
+  font-family: "SanFranciscoRegular";
+  src: url('./fonts/SanFranciscoTextRegular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "SanFranciscoMedium";
+  src: url('./fonts/SanFranciscoMedium.woff2') format('woff2');
+}
+
 body {
   margin: 0;
-  font-family: "San Francisco Text Regular",'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'SanFranciscoMedium','Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
